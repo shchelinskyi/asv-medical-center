@@ -1,0 +1,30 @@
+.wrapper {
+  min-width: 320px;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/images/bg-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 5px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,33 @@
+.search {
+  &__container {
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-color;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: 320px) {
+      max-width: 300px;
+    }
+  }
+
+  .search-buttons {
+    display: flex;
+    gap: 15px;
+
+    .disabled {
+      opacity: 0.4;
+      background-color: #97bad6;
+    }
+  }
+}
+
+.search-form__select {
+  option[disabled] {
+    display: none;
+  }
+}

@@ -1,0 +1,253 @@
+.search-form {
+
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__input {
+
+    width: 300px;
+    max-width: 95%;
+    height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: $input-bg-color;
+    @include text-prop-lato(400, 20px, 20px, $primary-color);
+    border-radius: 20px;
+
+    &::placeholder {
+      color: gray;
+    }
+
+
+    @media (max-width: 768px) {
+      width: 87%;
+      min-width: 250px;
+    }
+
+    @media (max-width: 320px) {
+      @include text-prop-lato(400, 18px, 18px, $primary-color);
+    }
+
+  }
+
+  &__select {
+    height: 40px;
+    max-width: 95%;
+    width: 250px;
+    padding: 0 10px;
+    @include text-prop-lato(400, 20px, 20px, $primary-color);
+    outline: none;
+    border: none;
+    background-color: $input-bg-color;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    @media (max-width: 320px) {
+      @include text-prop-lato(400, 18px, 18px, $primary-color);
+    }
+  }
+
+
+}
+
+.form-login {
+  @include flex-column();
+  align-items: center;
+  row-gap: 30px;
+
+  &__input {
+    width: 220px;
+    height: 40px;
+    background-color: $input-bg-color;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    @include text-prop-lato(700, 18px, 18px, $main-color);
+    text-align: center;
+
+    &::placeholder {
+      font-family: Lato, sans-serif;
+      color: #83b3cb;
+    }
+  }
+
+  button[type=submit].disabled {
+    opacity: 0.4;
+    background-color: #97bad6;
+  }
+}
+
+.form-visit,
+.form-visit__specialist {
+  @include flex-column();
+  align-items: center;
+  row-gap: 35px;
+  width: 100%;
+
+  &__select {
+    width: 350px;
+    padding: 12px;
+    appearance: none;
+    background-image: url('../assets/images/icon-down.png');
+    background-repeat: no-repeat;
+    background-position: 320px center;
+    background-size: 15px 15px;
+    background-color: $input-bg-color;
+    @include text-prop-lato(400, 22px, 22px, $main-color);
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    & option {
+      background-color: #c1eded;
+      cursor: pointer;
+
+      &:checked {
+        background-color: #d2b74b;
+        color: $light-color;
+      }
+
+      &[disabled] {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      width: 250px;
+      @include text-prop-lato(400, 18px, 18px, $main-color);
+      background-position: 220px center;
+    }
+  }
+
+
+  &__label {
+    @include flex-column();
+    @include text-prop-lato(700, 22px, 22px, $light-text-color);
+    text-align: center;
+    row-gap: 10px;
+    align-items: center;
+  }
+
+  &__input {
+    width: 350px;
+    height: 40px;
+    background-color: $input-bg-color;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    @include text-prop-lato(700, 18px, 18px, $main-color);
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+
+    &::placeholder {
+      font-family: Lato, sans-serif;
+      color: #83b3cb;
+    }
+
+    @media (max-width: 480px) {
+      width: 250px;
+      &::placeholder {
+        font-size: 16px;
+      }
+
+    }
+  }
+
+
+  &__text-area {
+    max-width: 350px;
+    width: 350px;
+    min-height: 50px;
+    padding: 10px;
+    background-color: $input-bg-color;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    @include text-prop-lato(700, 18px, 18px, $main-color);
+    text-align: center;
+
+    &::placeholder {
+      font-family: Lato, sans-serif;
+      color: #83b3cb;
+    }
+
+    @media (max-width: 480px) {
+      width: 250px;
+      min-height: 80px;
+    }
+
+  }
+
+  user-select: none;
+
+  button.submit.disabled {
+    opacity: 0.4;
+    background-color: #97bad6;
+  }
+}
+
+.label-container-radio {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  background-color: $input-bg-color;
+  border-radius: 20px;
+
+  @media (max-width: 480px) {
+    width: 250px;
+  }
+}
+
+.form-visit__label--radio {
+  color: $main-color;
+  font-size: 20px;
+  cursor: pointer;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+
+.form-pressure__container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  color: #00579b;
+}
+
+.form-visit__input--shot {
+  width: 120px;
+
+  &::placeholder {
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    width: 100px;
+  }
+}
+
+.form-visit__label-output {
+  color: #00579b;
+}
+
+.form-body-mass__container {
+  padding: 10px 5px;
+  @include flex-column();
+  background-color: $input-bg-color;
+  border-radius: 20px;
+
+  @media (max-width: 480px) {
+    width: 260px;
+  }
+}

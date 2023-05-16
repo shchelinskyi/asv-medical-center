@@ -1,0 +1,149 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &--hide {
+    display: none;
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 16px 20px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+      width: 310px;
+    }
+
+    &--login {
+      background-image: url("../assets/images/form-log.png");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--visit {
+      background-image: url("../assets/images/visit3.png");
+      background-position: center;
+      background-size: cover;
+
+      @media (max-width: 480px) {
+        width: 310px;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    @include text-prop-lato(500, 30px, 30px, $light-color );
+    cursor: pointer;
+    transition: all 0.25s;
+
+    &:hover {
+      color: #bf1212;
+      transform: rotate(90deg);
+    }
+
+    &--large {
+      font-size: 50px;
+
+      @media (max-width: 480px) {
+        top: 3px;
+        right: 2px;
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      top: 10px;
+      right: 10px;
+      @include text-prop-lato(500, 30px, 30px, #02094e);
+    }
+  }
+
+  &__content {
+    overflow: auto;
+    width: 300px;
+    @include flex-column;
+    align-items: center;
+    row-gap: 30px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &--visit {
+      width: 400px;
+      max-height: 620px;
+      height: 620px;
+
+      @media (max-width: 480px) {
+        width: 270px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $primary-color;
+        border-radius: 5px;
+      }
+    }
+
+    &-title {
+      @include text-prop-lato(700, 26px, 26px, $primary-color);
+      text-align: center;
+      margin-top: 30px;
+
+      &--visit {
+        background-color: $primary-color;
+        padding: 10px 70px;
+        border-radius: 20px;
+        color: $light-color;
+        margin-top: 10px;
+
+        @media (max-width: 480px) {
+          width: 240px;
+        }
+      }
+    }
+
+    &-img {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      &-text {
+        @include text-prop-lato(600, 20px, 20px, $primary-color)
+      }
+    }
+
+    &-icon {
+      margin-top: 30px;
+      width: 70px;
+      height: 70px;
+
+      &--visit {
+        width: 100px;
+        height: 100px;
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/style.min.css?_v=20230516161349">
+  <title>ASV Medical Center</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="container">
+        <header class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <picture><source srcset="./dist/assets/images/logo.webp" type="image/webp"><img class="logo-img" src="./dist/assets/images/logo.png" alt="logo"></picture>
+            <h3 class="logo-text">ASV Medical Center</h3>
+        </div>
+        <button class="btn btn--big btn__login">LOGIN</button>
+        <button class="btn btn--big btn__logout hide">LOGOUT</button>
+        <button class="btn btn--big btn--bg-prime btn__visit hide">CREATE VISIT</button>
+    </div>
+</header>
+        <main class="main">
+            <section class="search">
+    <div class="search__container">
+        <form class="search-form">
+            <input class="search-form__input" type="text" name="search-text" placeholder="Search by title or content">
+            <select class="search-form__select" name="search-status">
+                <option value="" disabled selected>Search by status</option>
+                <option value="open">Open</option>
+                <option value="done">Done</option>
+            </select>
+            <select class="search-form__select" name="search-priority">
+                <option value="" disabled selected>Search by urgency</option>
+                <option value="urgent">Urgent</option>
+                <option value="priority">Priority</option>
+                <option value="normal">Normal</option>
+            </select>
+        </form>
+        <div class="search-buttons">
+            <button class="btn btn--bg-prime" type="button" name="search-button">Search</button>
+            <button class="btn btn--bg-prime" type="button" name="search-all">Show All</button>
+        </div>
+    </div>
+</section>
+            <section class="cards">
+    <h3 class="no-content no-content--hide">No items have been added</h3>
+    <h3 class="no-search no-search--hide">Sorry, no cards...</h3>
+    <div class="cards__content"></div>
+</section>
+        </main>
+        <div class="modal modal--hide"></div>
+    </div>
+</div>
+<script src="dist/js/main.min.js?_v=20230516161349"></script>
+</body>
+
+</html>
