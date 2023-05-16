@@ -46,9 +46,9 @@ npm run build
 
 https://shchelinskyi.github.io/asv-medical-center
 
-email: asv2023@gmail.com;
+email: asv2023@gmail.com
 
-password: asv2023;
+password: asv2023
 
 
 
